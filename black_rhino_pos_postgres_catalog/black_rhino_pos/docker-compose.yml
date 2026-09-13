@@ -1,0 +1,31 @@
+services:
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_DB: black_rhino
+      POSTGRES_USER: black_rhino
+      POSTGRES_PASSWORD: CHANGE_THIS_PASSWORD
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U black_rhino -d black_rhino"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  app:
+    build: .
+    environment:
+      DATABASE_URL: postgresql+psycopg://black_rhino:CHANGE_THIS_PASSWORD@db:5432/black_rhino
+      APP_SECRET: CHANGE_THIS_TO_A_LONG_RANDOM_SECRET
+      SESSION_HTTPS_ONLY: "0"
+    ports:
+      - "8000:8000"
+    depends_on:
+      db:
+        condition: service_healthy
+
+volumes:
+  postgres_data:

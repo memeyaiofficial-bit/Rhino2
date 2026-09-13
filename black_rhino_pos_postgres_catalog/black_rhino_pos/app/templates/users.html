@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block title %}Users · Black Rhino{% endblock %}
+{% block heading %}Users & access{% endblock %}
+{% block content %}
+<div class="section-head"><div><div class="eyebrow">ACCESS CONTROL</div><h2>Staff accounts</h2></div><button class="btn primary" onclick="showModal('userModal')">Create user</button></div>
+<div class="panel table-panel"><table><thead><tr><th>User</th><th>Username</th><th>Role</th><th>Status</th><th>Created</th></tr></thead><tbody>{% for u in users %}<tr><td><strong>{{u.full_name}}</strong></td><td>{{u.username}}</td><td><span class="role-pill">{{u.role.name}}</span></td><td>{{'Active' if u.is_active else 'Disabled'}}</td><td>{{u.created_at.strftime('%d %b %Y')}}</td></tr>{% endfor %}</tbody></table></div>
+<div id="userModal" class="modal"><div class="modal-card"><div class="modal-head"><h2>Create staff account</h2><button onclick="hideModal('userModal')">×</button></div><form class="form-grid" onsubmit="return saveUser(event)"><label>Full name<input name="full_name" required></label><label>Username<input name="username" required></label><label>Role<select name="role"><option>ADMIN</option><option>MANAGER</option><option>CASHIER</option></select></label><label>Password<input name="password" type="password" autocomplete="new-password" required></label><button class="btn primary full">Create account</button></form></div></div>
+{% endblock %}
+{% block scripts %}<script>async function saveUser(e){e.preventDefault();let r=await api('/api/users',Object.fromEntries(new FormData(e.target)));if(r.ok)location.reload();return false}</script>{% endblock %}

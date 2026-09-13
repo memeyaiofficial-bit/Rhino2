@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}Dashboard · Black Rhino{% endblock %}
+{% block heading %}Good business starts here.{% endblock %}
+{% block content %}
+<div class="dashboard-grid">
+  <div class="hero-card"><div class="eyebrow">TODAY</div><div class="hero-value">KES {{ sales_today }}</div><div class="muted">Completed sales</div><div class="hero-line"></div><a href="/pos" class="btn primary">Open point of sale</a></div>
+  <div class="metric-card"><div class="metric-icon">#</div><div class="eyebrow">TRANSACTIONS</div><strong>{{ tx_today }}</strong><span>today</span></div>
+  <div class="metric-card warning"><div class="metric-icon">!</div><div class="eyebrow">STOCK WATCH</div><strong>{{ low_stock|length }}</strong><span>items at reorder level</span></div>
+</div>
+<div class="section-head"><div><div class="eyebrow">CONTROL ROOM</div><h2>What needs attention</h2></div><a href="/inventory" class="btn ghost">View inventory</a></div>
+<div class="two-col">
+  <div class="panel"><div class="panel-head"><h3>Low stock</h3><span class="tag">LIVE</span></div>
+    {% if low_stock %}
+    <div class="list">{% for v in low_stock %}<div class="list-row"><div><strong>{{ v.product.name }}</strong><small>{{ v.size }} · {{ v.sku }}</small></div><span class="stock-low">{{ v.inventory.quantity }} left</span></div>{% endfor %}</div>
+    {% else %}<div class="empty">Inventory is comfortably above reorder levels.</div>{% endif %}
+  </div>
+  <div class="panel"><div class="panel-head"><h3>Recent sales</h3><a href="/pos">New sale</a></div>
+    <div class="list">{% for s in recent %}<div class="list-row"><div><strong>{{ s.receipt_number }}</strong><small>{{ s.created_at.strftime('%d %b %Y, %H:%M') }} · {{ s.cashier.full_name }}</small></div><strong>KES {{ money(s.total) }}</strong></div>{% else %}<div class="empty">No sales yet.</div>{% endfor %}</div>
+  </div>
+</div>
+{% endblock %}

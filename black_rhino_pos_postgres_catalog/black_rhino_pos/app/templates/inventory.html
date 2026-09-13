@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}Inventory · Black Rhino{% endblock %}
+{% block heading %}Inventory{% endblock %}
+{% block content %}
+<div class="section-head"><div><div class="eyebrow">STOCK CONTROL</div><h2>On-hand inventory</h2></div><div class="search-wrap"><input class="search" placeholder="Filter inventory" oninput="filterRows(this.value)"></div></div>
+<div class="panel table-panel"><table id="invTable"><thead><tr><th>Product</th><th>SKU</th><th>Size</th><th>Cost</th><th>Selling</th><th>Stock</th><th>Reorder</th><th></th></tr></thead><tbody>
+{% for v in variants %}<tr><td><strong>{{ v.product.name }}</strong></td><td>{{ v.sku }}</td><td>{{ v.size }}</td><td>KES {{ money(v.cost_price) }}</td><td>KES {{ money(v.selling_price) }}</td><td><span class="{{ 'stock-low' if v.inventory.quantity <= v.reorder_level else 'stock-ok' }}">{{ v.inventory.quantity }}</span></td><td>{{ v.reorder_level }}</td><td>{% if user.role in ['ADMIN','MANAGER'] %}<button class="btn small" onclick="adjustStock({{v.id}},{{v.inventory.quantity}})">Adjust</button>{% endif %}</td></tr>{% endfor %}
+</tbody></table></div>
+{% endblock %}
+{% block scripts %}<script>
+function filterRows(q){q=q.toLowerCase();document.querySelectorAll('#invTable tbody tr').forEach(r=>r.style.display=r.textContent.toLowerCase().includes(q)?'':'none')}
+async function adjustStock(id,current){let n=prompt('New quantity',current);if(n===null)return;let reason=prompt('Reason','Stock count adjustment');if(reason===null)return;let r=await api('/api/inventory/adjust',{variant_id:id,new_quantity:+n,reason});if(r.ok)location.reload()}
+</script>{% endblock %}

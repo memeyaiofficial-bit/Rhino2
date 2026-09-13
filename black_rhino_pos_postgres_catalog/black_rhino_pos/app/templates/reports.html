@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% block title %}Reports · Black Rhino{% endblock %}
+{% block heading %}Reports{% endblock %}
+{% block content %}
+<div class="dashboard-grid"><div class="metric-card"><div class="eyebrow">TODAY SALES</div><strong>KES {{sales}}</strong><span>completed</span></div><div class="metric-card"><div class="eyebrow">TODAY EXPENSES</div><strong>KES {{expenses}}</strong><span>recorded</span></div></div>
+<div class="panel"><div class="panel-head"><h3>Best-selling products today</h3><span class="tag">QUANTITY</span></div><table><thead><tr><th>Product</th><th>Units</th><th>Sales value</th></tr></thead><tbody>{% for row in top %}<tr><td><strong>{{row[0]}}</strong></td><td>{{row[1]}}</td><td>KES {{money(row[2])}}</td></tr>{% else %}<tr><td colspan="3">No sales yet.</td></tr>{% endfor %}</tbody></table></div>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}Shifts · Black Rhino{% endblock %}
+{% block heading %}Shifts & cash drawer{% endblock %}
+{% block content %}
+<div class="two-col">
+<div class="panel"><div class="panel-head"><h3>My shift</h3><span class="tag">{{ 'OPEN' if current else 'CLOSED' }}</span></div>
+{% if current %}<div class="big-stat">KES {{money(current.opening_cash)}}</div><p class="muted">Opening float · {{current.opened_at.strftime('%d %b %Y %H:%M')}}</p><button class="btn primary" onclick="closeShift()">Close shift</button>
+{% else %}<p class="muted">Open a shift before processing cash sales.</p><button class="btn primary" onclick="openShift()">Open shift</button>{% endif %}
+</div>
+<div class="panel"><div class="panel-head"><h3>Recent shifts</h3></div><div class="list">{% for s in shifts %}<div class="list-row"><div><strong>{{s.user.full_name}}</strong><small>{{s.opened_at.strftime('%d %b %Y %H:%M')}}</small></div><span>{{s.status}}</span></div>{% endfor %}</div></div>
+</div>
+{% endblock %}
+{% block scripts %}<script>
+async function openShift(){let n=prompt('Opening cash (KES)','0');if(n===null)return;let r=await api('/api/shifts/open',{opening_cash:+n});if(r.ok)location.reload()}
+async function closeShift(){let n=prompt('Counted closing cash (KES)');if(n===null)return;let r=await api('/api/shifts/close',{closing_cash:+n});if(r.ok){toast('Shift closed. Difference: KES '+r.difference.toFixed(2),'success');setTimeout(()=>location.reload(),800)}}
+</script>{% endblock %}

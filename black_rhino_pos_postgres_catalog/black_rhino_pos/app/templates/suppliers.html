@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block title %}Suppliers · Black Rhino{% endblock %}
+{% block heading %}Suppliers{% endblock %}
+{% block content %}
+<div class="section-head"><div><div class="eyebrow">PROCUREMENT</div><h2>Supplier directory</h2></div><button class="btn primary" onclick="showModal('supplierModal')">Add supplier</button></div>
+<div class="panel table-panel"><table><thead><tr><th>Supplier</th><th>Phone</th><th>Email</th><th>Address</th></tr></thead><tbody>{% for s in suppliers %}<tr><td><strong>{{s.name}}</strong></td><td>{{s.phone or '—'}}</td><td>{{s.email or '—'}}</td><td>{{s.address or '—'}}</td></tr>{% endfor %}</tbody></table></div>
+<div id="supplierModal" class="modal"><div class="modal-card"><div class="modal-head"><h2>Add supplier</h2><button onclick="hideModal('supplierModal')">×</button></div><form class="form-grid" onsubmit="return saveSupplier(event)"><label>Name<input name="name" required></label><label>Phone<input name="phone"></label><label>Email<input name="email"></label><label class="full">Address<input name="address"></label><button class="btn primary full">Save supplier</button></form></div></div>
+{% endblock %}
+{% block scripts %}<script>async function saveSupplier(e){e.preventDefault();let r=await api('/api/suppliers',Object.fromEntries(new FormData(e.target)));if(r.ok)location.reload();return false}</script>{% endblock %}

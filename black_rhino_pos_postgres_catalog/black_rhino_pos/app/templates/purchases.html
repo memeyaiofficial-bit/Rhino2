@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Purchases · Black Rhino{% endblock %}
+{% block heading %}Purchases{% endblock %}
+{% block content %}
+<div class="section-head"><div><div class="eyebrow">GOODS IN</div><h2>Receiving desk</h2></div><button class="btn primary" onclick="showModal('purchaseModal')">Receive stock</button></div>
+<div class="panel table-panel"><table><thead><tr><th>Reference</th><th>Supplier</th><th>Total</th><th>Status</th><th>Date</th></tr></thead><tbody>{% for p in purchases %}<tr><td><strong>{{p.reference_number}}</strong></td><td>{{p.supplier.name}}</td><td>KES {{money(p.total)}}</td><td><span class="tag">{{p.status}}</span></td><td>{{p.created_at.strftime('%d %b %Y %H:%M')}}</td></tr>{% endfor %}</tbody></table></div>
+<div id="purchaseModal" class="modal"><div class="modal-card wide-modal"><div class="modal-head"><h2>Receive stock</h2><button onclick="hideModal('purchaseModal')">×</button></div><form onsubmit="return savePurchase(event)"><div class="form-grid"><label>Supplier<select id="supplier_id" required>{% for s in suppliers %}<option value="{{s.id}}">{{s.name}}</option>{% endfor %}</select></label><label>Reference<input id="reference_number" required></label></div><div id="purchaseItems"></div><button type="button" class="btn small" onclick="addPurchaseLine()">Add line</button><button class="btn primary full">Receive & update stock</button></form></div></div>
+{% endblock %}
+{% block scripts %}<script>
+const variants=[{% for v in variants %}{id:{{v.id}},name:"{{v.product.name|replace('"','\\"')}}",size:"{{v.size}}"}, {% endfor %}];
+function addPurchaseLine(){let d=document.createElement('div');d.className='purchase-line';d.innerHTML=`<select class="pvar">${variants.map(v=>`<option value="${v.id}">${v.name} ${v.size}</option>`).join('')}</select><input class="pqty" type="number" min="1" value="1"><input class="pcost" type="number" step="0.01" placeholder="Unit cost"><button type="button" class="btn small" onclick="this.parentElement.remove()">Remove</button>`;document.getElementById('purchaseItems').appendChild(d)}
+addPurchaseLine();
+async function savePurchase(e){e.preventDefault();let lines=[...document.querySelectorAll('.purchase-line')].map(x=>({variant_id:+x.querySelector('.pvar').value,quantity:+x.querySelector('.pqty').value,unit_cost:+x.querySelector('.pcost').value}));let r=await api('/api/purchases',{supplier_id:+supplier_id.value,reference_number:reference_number.value,items:lines});if(r.ok)location.reload();return false}
+</script>{% endblock %}

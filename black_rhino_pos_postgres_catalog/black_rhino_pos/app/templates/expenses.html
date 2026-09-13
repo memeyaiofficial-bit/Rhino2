@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block title %}Expenses · Black Rhino{% endblock %}
+{% block heading %}Expenses{% endblock %}
+{% block content %}
+<div class="section-head"><div><div class="eyebrow">CASH CONTROL</div><h2>Operating expenses</h2></div><button class="btn primary" onclick="showModal('expenseModal')">Record expense</button></div>
+<div class="panel table-panel"><table><thead><tr><th>Category</th><th>Amount</th><th>Note</th><th>Date</th></tr></thead><tbody>{% for e in expenses %}<tr><td><strong>{{e.category}}</strong></td><td>KES {{money(e.amount)}}</td><td>{{e.note or '—'}}</td><td>{{e.created_at.strftime('%d %b %Y %H:%M')}}</td></tr>{% endfor %}</tbody></table></div>
+<div id="expenseModal" class="modal"><div class="modal-card"><div class="modal-head"><h2>Record expense</h2><button onclick="hideModal('expenseModal')">×</button></div><form class="form-grid" onsubmit="return saveExpense(event)"><label>Category<input name="category" placeholder="Transport, utilities, etc." required></label><label>Amount<input name="amount" type="number" step="0.01" required></label><label class="full">Note<textarea name="note"></textarea></label><button class="btn primary full">Save expense</button></form></div></div>
+{% endblock %}
+{% block scripts %}<script>async function saveExpense(e){e.preventDefault();let r=await api('/api/expenses',Object.fromEntries(new FormData(e.target)));if(r.ok)location.reload();return false}</script>{% endblock %}

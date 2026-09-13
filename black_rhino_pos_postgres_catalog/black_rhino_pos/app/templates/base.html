@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{% block title %}Black Rhino POS{% endblock %}</title>
+<link rel="stylesheet" href="/static/app.css">
+</head>
+<body>
+{% if user %}
+<div class="shell">
+  <aside class="sidebar">
+    <div class="brand"><img src="/static/logo.png"><div><strong>BLACK RHINO</strong><small>LIQUOR POS</small></div></div>
+    <nav>
+      <a href="/dashboard" class="nav-item {% if request.url.path=='/dashboard' %}active{% endif %}"><span class="ico">⌂</span>Dashboard</a>
+      <a href="/pos" class="nav-item"><span class="ico">▣</span>Point of Sale</a>
+      <a href="/inventory" class="nav-item"><span class="ico">▤</span>Inventory</a>
+      <a href="/products" class="nav-item"><span class="ico">◈</span>Products</a>
+      <a href="/customers" class="nav-item"><span class="ico">♙</span>Customers</a>
+      {% if user.role in ['ADMIN','MANAGER'] %}
+      <a href="/suppliers" class="nav-item"><span class="ico">◇</span>Suppliers</a>
+      <a href="/purchases" class="nav-item"><span class="ico">⇩</span>Purchases</a>
+      <a href="/expenses" class="nav-item"><span class="ico">−</span>Expenses</a>
+      <a href="/reports" class="nav-item"><span class="ico">▥</span>Reports</a>
+      {% endif %}
+      <a href="/shifts" class="nav-item"><span class="ico">◷</span>Shifts</a>
+      {% if user.role == 'ADMIN' %}
+      <a href="/users" class="nav-item"><span class="ico">♙</span>Users</a>
+      {% endif %}
+    </nav>
+    <div class="sidebar-foot"><div class="store-status"><span></span> Local system online</div></div>
+  </aside>
+  <main class="main">
+    <header class="topbar">
+      <div><div class="eyebrow">BLACK RHINO / OPERATIONS</div><h1>{% block heading %}Dashboard{% endblock %}</h1></div>
+      <div class="top-actions"><span class="role-pill">{{ user.role }}</span><span class="user-name">{{ user.name }}</span>
+      <form method="post" action="/logout"><button class="btn ghost">Sign out</button></form></div>
+    </header>
+    <section class="content">{% block content %}{% endblock %}</section>
+  </main>
+</div>
+{% else %}{% block public_content %}{% endblock %}{% endif %}
+<script src="/static/app.js"></script>
+{% block scripts %}{% endblock %}
+</body>
+</html>

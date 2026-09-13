@@ -1,0 +1,123 @@
+product_name,variant_name,size,unit,sku,brand,category,selling_price
+Balozi,Balozi,,unit,BR-balozi-balozi,Balozi,Beer,230
+Balozi,Balozi Can,,can,BR-balozi-balozi-can,Balozi,Beer,300
+Black Ice,Black Ice,,unit,BR-black-ice-black-ice,Black Ice,Beer,250
+Black Ice,Black Ice Can,,can,BR-black-ice-black-ice-can,Black Ice,Beer,250
+Fax,Fax Can,,can,BR-fax-fax-can,Fax,Beer,300
+Goddons,Goddons Can,,can,BR-goddons-goddons-can,Goddons,Beer,300
+Goddons,Goddons Can Pink,,can,BR-goddons-goddons-can-pink,Goddons,Beer,300
+Guinness,Guinness,,unit,BR-guinness-guinness,Guinness,Beer,270
+Guinness,Guinness Can,,can,BR-guinness-guinness-can,Guinness,Beer,300
+Guinness Smooth,Guinness Smooth,,unit,BR-guinness-smooth-guinness-smooth,Guinness Smooth,Beer,300
+Guinness Smooth,Smooth Can,,can,BR-guinness-smooth-smooth-can,Guinness Smooth,Beer,250
+Heineken,Heineken Can,,can,BR-heineken-heineken-can,Heineken,Beer,400
+Henken,Henken,,unit,BR-henken-henken,Henken,Beer,250
+Ice Berry,Ice Berry,,unit,BR-ice-berry-ice-berry,Ice Berry,Beer,250
+Ice Berry,Ice Berry Can,,can,BR-ice-berry-ice-berry-can,Ice Berry,Beer,250
+Manyatta,Manyatta Bottle,,bottle,BR-manyatta-manyatta-bottle,Manyatta,Beer,300
+Manyatta,Manyatta Can,,can,BR-manyatta-manyatta-can,Manyatta,Beer,350
+Pilsner,Pilsner,,unit,BR-pilsner-pilsner,Pilsner,Beer,230
+Pilsner,Pilsner Can,,can,BR-pilsner-pilsner-can,Pilsner,Beer,300
+Punch,Punch,,unit,BR-punch-punch,Punch,Beer,250
+Punch,Punch Can,,can,BR-punch-punch-can,Punch,Beer,250
+Snapp,Snapp,,unit,BR-snapp-snapp,Snapp,Beer,250
+Snapp,Snapp Can,,can,BR-snapp-snapp-can,Snapp,Beer,250
+Summit,Summit,,unit,BR-summit-summit,Summit,Beer,230
+Tusker,Tusker Can,,can,BR-tusker-tusker-can,Tusker,Beer,300
+Tusker,Tuskers,,unit,BR-tusker-tuskers,Tusker,Beer,230
+Tusker Cinder,Tusker Cinder,,unit,BR-tusker-cinder-tusker-cinder,Tusker Cinder,Beer,250
+Tusker Cinder,Tusker Cinder Can,,can,BR-tusker-cinder-tusker-cinder-can,Tusker Cinder,Beer,300
+Tusker Light,Tusker Light,,unit,BR-tusker-light-tusker-light,Tusker Light,Beer,230
+Tusker Light,Tusker Light Can,,can,BR-tusker-light-tusker-light-can,Tusker Light,Beer,300
+Tusker Malt,Tusker Malt,,unit,BR-tusker-malt-tusker-malt,Tusker Malt,Beer,250
+Tusker Malt,Tusker Malt Can,,can,BR-tusker-malt-tusker-malt-can,Tusker Malt,Beer,300
+White Cap,Whitecap,,unit,BR-white-cap-whitecap,White Cap,Beer,250
+White Cap,Whitecap Can,,can,BR-white-cap-whitecap-can,White Cap,Beer,300
+Hunter Dry,Hunter Dry,,unit,BR-hunter-dry-hunter-dry,Hunter Dry,Cider,350
+Hunters,Hunters 750ml,750ml,bottle,BR-hunters-hunters-750ml,Hunters,Cider,1700
+Hunters,Hunters 1/2,500ml,bottle,BR-hunters-hunters-1-2,Hunters,Cider,700
+Hunters,Hunters 1/4,250ml,bottle,BR-hunters-hunters-1-4,Hunters,Cider,400
+Savannah,Savannah,,unit,BR-savannah-savannah,Savannah,Cider,350
+Black Label Tots,Black Label Tots,,unit,BR-black-label-tots-black-label-tots,Black Label Tots,Whisky,250
+Black N' White,Black N' White 750ml,750ml,bottle,BR-black-n-white-black-n-white-750ml,Black N' White,Whisky,1500
+Black N' White,Black N' White 1/2,500ml,bottle,BR-black-n-white-black-n-white-1-2,Black N' White,Whisky,800
+Grants,Grants 1 Liter,1L,bottle,BR-grants-grants-1-liter,Grants,Whisky,3500
+Grants,Grants 750,750ml,bottle,BR-grants-grants-750,Grants,Whisky,3000
+Grants,Grants 1/2,500ml,bottle,BR-grants-grants-1-2,Grants,Whisky,2200
+Jack Daniel's,Jack Daniels 1 Liter,1L,bottle,BR-jack-daniels-jack-daniels-1-liter,Jack Daniel's,Whisky,6000
+Jack Daniel's,Jack Daniels 750ml,750ml,bottle,BR-jack-daniels-jack-daniels-750ml,Jack Daniel's,Whisky,5000
+Jameson,Jameson 1 Liter,1L,bottle,BR-jameson-jameson-1-liter,Jameson,Whisky,5000
+Jameson,Jameson 750ml,750ml,bottle,BR-jameson-jameson-750ml,Jameson,Whisky,4500
+Jameson,Jameson Half,500ml,bottle,BR-jameson-jameson-half,Jameson,Whisky,2600
+Jimmy Jimro,Jimmy Jimro,,unit,BR-jimmy-jimro-jimmy-jimro,Jimmy Jimro,Whisky,500
+Johnnie Walker Black Label,Black Labels 1 Liter,1L,bottle,BR-johnnie-walker-black-label-black-labels-1-liter,Johnnie Walker Black Label,Whisky,5500
+Johnnie Walker Black Label,Black Label 750ml,750ml,bottle,BR-johnnie-walker-black-label-black-label-750ml,Johnnie Walker Black Label,Whisky,4500
+Johnnie Walker Black Label,Black Label Half,500ml,bottle,BR-johnnie-walker-black-label-black-label-half,Johnnie Walker Black Label,Whisky,2500
+Johnnie Walker Black Label,Black Label 1/4,250ml,bottle,BR-johnnie-walker-black-label-black-label-1-4,Johnnie Walker Black Label,Whisky,1500
+Johnnie Walker Double Black,Double Black 1ltr,1L,bottle,BR-johnnie-walker-double-black-double-black-1ltr,Johnnie Walker Double Black,Whisky,
+Johnnie Walker Double Black,Double Black 750ml,750ml,bottle,BR-johnnie-walker-double-black-double-black-750ml,Johnnie Walker Double Black,Whisky,
+Red Label,Red Label 750ml,750ml,bottle,BR-red-label-red-label-750ml,Red Label,Whisky,2500
+Red Label,Red Label 350ml,350ml,bottle,BR-red-label-red-label-350ml,Red Label,Whisky,1500
+Singleton,Singleton,,unit,BR-singleton-singleton,Singleton,Whisky,8000
+Smirnoff Vodka,Smirnoff Vodka 750,750ml,bottle,BR-smirnoff-vodka-smirnoff-vodka-750,Smirnoff Vodka,Vodka,2000
+Smirnoff Vodka,Smirnoff 1/2,500ml,bottle,BR-smirnoff-vodka-smirnoff-1-2,Smirnoff Vodka,Vodka,900
+Smirnoff Vodka,Smirnoff 1/4,250ml,bottle,BR-smirnoff-vodka-smirnoff-1-4,Smirnoff Vodka,Vodka,650
+Gilbey's,Gilbass 750,750ml,bottle,BR-gilbeys-gilbass-750,Gilbey's,Gin,2000
+Gilbey's,Gilbass 1/2,500ml,bottle,BR-gilbeys-gilbass-1-2,Gilbey's,Gin,900
+Gilbey's,Gilbass 1/4,250ml,bottle,BR-gilbeys-gilbass-1-4,Gilbey's,Gin,650
+Gordon's,Gordons 750,750ml,bottle,BR-gordons-gordons-750,Gordon's,Gin,2000
+Konyagi,Konyagi 750ml,750ml,bottle,BR-konyagi-konyagi-750ml,Konyagi,Gin,1200
+Konyagi,Konyagi 1/2,500ml,bottle,BR-konyagi-konyagi-1-2,Konyagi,Gin,800
+Konyagi,Konyagi 1/4,250ml,bottle,BR-konyagi-konyagi-1-4,Konyagi,Gin,450
+Best,Best 750ml,750ml,bottle,BR-best-best-750ml,Best,Brandy,1700
+Best,Best 1/2,500ml,bottle,BR-best-best-1-2,Best,Brandy,800
+Best,Best 1/4,250ml,bottle,BR-best-best-1-4,Best,Brandy,450
+Bold 7,Bold 7 750ml,750ml,bottle,BR-bold-7-bold-7-750ml,Bold 7,Brandy,2000
+Bold 7,Bold 7 1/2,500ml,bottle,BR-bold-7-bold-7-1-2,Bold 7,Brandy,900
+Bold 7,Bold 7 1/4,250ml,bottle,BR-bold-7-bold-7-1-4,Bold 7,Brandy,650
+County,County 750ml,750ml,bottle,BR-county-county-750ml,County,Brandy,1100
+County,County 1/4,250ml,bottle,BR-county-county-1-4,County,Brandy,350
+Crome,Crome 750ml,750ml,bottle,BR-crome-crome-750ml,Crome,Brandy,1000
+Crome,Crome 1/4,250ml,bottle,BR-crome-crome-1-4,Crome,Brandy,350
+Hennessy,Hennessy,,unit,BR-hennessy-hennessy,Hennessy,Brandy,8500
+John Bar,Johnbar 1Liter,1L,bottle,BR-john-bar-johnbar-1liter,John Bar,Brandy,3000
+John Bar,Jonbar 750,750ml,bottle,BR-john-bar-jonbar-750,John Bar,Brandy,2500
+Kenya Cane,Kenya Cane 750ml,750ml,can,BR-kenya-cane-kenya-cane-750ml,Kenya Cane,Brandy,1100
+Kenya Cane,Kenya Cane 1/2,500ml,can,BR-kenya-cane-kenya-cane-1-2,Kenya Cane,Brandy,600
+Kenya Cane,Kenya Cane 1/4,250ml,can,BR-kenya-cane-kenya-cane-1-4,Kenya Cane,Brandy,350
+Richot,Richot 750ml,750ml,bottle,BR-richot-richot-750ml,Richot,Brandy,2000
+Richot,Richot 1/2,500ml,bottle,BR-richot-richot-1-2,Richot,Brandy,900
+Richot,Richot 1/4,250ml,bottle,BR-richot-richot-1-4,Richot,Brandy,650
+V.N.A,V N A 750ml,750ml,bottle,BR-v-n-a-v-n-a-750ml,V.N.A,Brandy,1400
+V.N.A,V N A 1/4 500,250ml,bottle,BR-v-n-a-v-n-a-1-4-500,V.N.A,Brandy,500
+Vats 69,Vats 69 750ml,750ml,bottle,BR-vats-69-vats-69-750ml,Vats 69,Brandy,2400
+Vats 69,Vats 1/2,500ml,bottle,BR-vats-69-vats-1-2,Vats 69,Brandy,1200
+Viceroy,Viceroy 750,750ml,bottle,BR-viceroy-viceroy-750,Viceroy,Brandy,2000
+Viceroy,Viceroy 1/2,500ml,bottle,BR-viceroy-viceroy-1-2,Viceroy,Brandy,900
+Viceroy,Viceroy 1/4,250ml,bottle,BR-viceroy-viceroy-1-4,Viceroy,Brandy,650
+Captain Morgan,Captain Morgan 750ml,750ml,bottle,BR-captain-morgan-captain-morgan-750ml,Captain Morgan,Rum,1500
+Captain Morgan,Captain Morgan 250ml,250ml,bottle,BR-captain-morgan-captain-morgan-250ml,Captain Morgan,Rum,500
+4th Street,4th Street,,unit,BR-4th-street-4th-street,4th Street,Wine,1500
+Caprice,Caprice,,unit,BR-caprice-caprice,Caprice,Wine,1200
+Caprice,Caprice Bottle,,bottle,BR-caprice-caprice-bottle,Caprice,Wine,1500
+Casaa Bwena,Casaa Bwena,,unit,BR-casaa-bwena-casaa-bwena,Casaa Bwena,Wine,1200
+Four Cousin,Four Cousin 750ml,750ml,bottle,BR-four-cousin-four-cousin-750ml,Four Cousin,Wine,1500
+Amarula,Amarula,,unit,BR-amarula-amarula,Amarula,Liqueurs,3500
+Best Cream,Best Cream,,unit,BR-best-cream-best-cream,Best Cream,Liqueurs,1600
+Jagermeister,Jagamiser,,unit,BR-jagermeister-jagamiser,Jagermeister,Liqueurs,5500
+Gin N Tonic Pink N Purple,Gin N Tonic Pink N Purple,,unit,BR-gin-n-tonic-pink-n-purple-gin-n-tonic-pink-n-purple,Gin N Tonic Pink N Purple,Ready to Drink,300
+Guarana,Guarana Can,,can,BR-guarana-guarana-can,Guarana,Soft Drinks,250
+Lemonade,Lemonade,,unit,BR-lemonade-lemonade,Lemonade,Soft Drinks,100
+Soda,Soda,,unit,BR-soda-soda,Soda,Soft Drinks,100
+Monster,Monster,,unit,BR-monster-monster,Monster,Energy Drinks,300
+Predator,Predator,,unit,BR-predator-predator,Predator,Energy Drinks,100
+Red Bull,Redbull,,unit,BR-red-bull-redbull,Red Bull,Energy Drinks,250
+Water,Water,1L,bottle,BR-water-water,Water,Water,100
+Danhill,Danhill,,unit,BR-danhill-danhill,Danhill,Other,30
+Del Monte,Del Monte,,unit,BR-del-monte-del-monte,Del Monte,Other,350
+Dresso Mobile,Dresso Mobile,,unit,BR-dresso-mobile-dresso-mobile,Dresso Mobile,Other,2300
+K.O,K.O,,unit,BR-k-o-k-o,K.O,Other,200
+Mara Moja,Mara Moja,,unit,BR-mara-moja-mara-moja,Mara Moja,Other,20
+Panadol,Panadol,,unit,BR-panadol-panadol,Panadol,Other,20
+SM,SM,,unit,BR-sm-sm,SM,Other,20
+Sportman,Sportman,,unit,BR-sportman-sportman,Sportman,Other,25
