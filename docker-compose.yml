@@ -13,12 +13,12 @@ services:
       test: ["CMD-SHELL", "pg_isready -U black_rhino -d black_rhino"]
       interval: 5s
       timeout: 5s
-      retries: 10
+      retries: 10s
 
   app:
     build: .
     environment:
-      DATABASE_URL: postgresql+psycopg://black_rhino:CHANGE_THIS_PASSWORD@db:5432/black_rhino
+      DATABASE_URL: postgresql://rhino2_user:sDv6rTrwqy6qRasFJBkV6XPWSaZQY0AT@dpg-dajabk15efls7385isfg-a.oregon-postgres.render.com/rhino2
       APP_SECRET: CHANGE_THIS_TO_A_LONG_RANDOM_SECRET
       SESSION_HTTPS_ONLY: "0"
     ports:
